@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E8C8F0F41E6208140045CA43 /* CoreDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C8F0F31E6208140045CA43 /* CoreDataTableViewController.swift */; };
+		E8C8F0F71E6208440045CA43 /* AnimeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C8F0F61E6208440045CA43 /* AnimeTableViewController.swift */; };
+		E8C8F0F91E620EC90045CA43 /* AnimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C8F0F81E620EC90045CA43 /* AnimeCell.swift */; };
 		E8E0484D1E60685F00C4B51B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E0484C1E60685F00C4B51B /* AppDelegate.swift */; };
 		E8E0484F1E60685F00C4B51B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E0484E1E60685F00C4B51B /* ViewController.swift */; };
 		E8E048521E60685F00C4B51B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8E048501E60685F00C4B51B /* Main.storyboard */; };
@@ -34,6 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E8B55B751E60C0A600AE15C9 /* dumidata.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = dumidata.json; sourceTree = "<group>"; };
+		E8C8F0F31E6208140045CA43 /* CoreDataTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataTableViewController.swift; sourceTree = "<group>"; };
+		E8C8F0F61E6208440045CA43 /* AnimeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimeTableViewController.swift; sourceTree = "<group>"; };
+		E8C8F0F81E620EC90045CA43 /* AnimeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimeCell.swift; sourceTree = "<group>"; };
 		E8E048491E60685F00C4B51B /* AnimeCore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimeCore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8E0484C1E60685F00C4B51B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8E0484E1E60685F00C4B51B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +81,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E8C8F0EE1E62047E0045CA43 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E8C8F0F81E620EC90045CA43 /* AnimeCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		E8C8F0EF1E6204900045CA43 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E8C8F0F31E6208140045CA43 /* CoreDataTableViewController.swift */,
+				E8C8F0F61E6208440045CA43 /* AnimeTableViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		E8C8F0F01E6204A10045CA43 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		E8E048401E60685F00C4B51B = {
 			isa = PBXGroup;
 			children = (
@@ -97,12 +128,16 @@
 		E8E0484B1E60685F00C4B51B /* AnimeCore */ = {
 			isa = PBXGroup;
 			children = (
+				E8C8F0F01E6204A10045CA43 /* Model */,
+				E8C8F0EF1E6204900045CA43 /* Controller */,
+				E8C8F0EE1E62047E0045CA43 /* View */,
 				E8E0484C1E60685F00C4B51B /* AppDelegate.swift */,
 				E8E0484E1E60685F00C4B51B /* ViewController.swift */,
 				E8E048501E60685F00C4B51B /* Main.storyboard */,
 				E8E048531E60685F00C4B51B /* Assets.xcassets */,
 				E8E048551E60685F00C4B51B /* LaunchScreen.storyboard */,
 				E8E048581E60685F00C4B51B /* Info.plist */,
+				E8B55B751E60C0A600AE15C9 /* dumidata.json */,
 			);
 			path = AnimeCore;
 			sourceTree = "<group>";
@@ -261,6 +296,9 @@
 			files = (
 				E8E0484F1E60685F00C4B51B /* ViewController.swift in Sources */,
 				E8E0484D1E60685F00C4B51B /* AppDelegate.swift in Sources */,
+				E8C8F0F71E6208440045CA43 /* AnimeTableViewController.swift in Sources */,
+				E8C8F0F91E620EC90045CA43 /* AnimeCell.swift in Sources */,
+				E8C8F0F41E6208140045CA43 /* CoreDataTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,6 +543,7 @@
 				E8E048731E60685F00C4B51B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E8E048741E60685F00C4B51B /* Build configuration list for PBXNativeTarget "AnimeCoreTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +552,7 @@
 				E8E048761E60685F00C4B51B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E8E048771E60685F00C4B51B /* Build configuration list for PBXNativeTarget "AnimeCoreUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +561,7 @@
 				E8E048791E60685F00C4B51B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
