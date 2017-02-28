@@ -42,12 +42,12 @@ class CoreDataTableViewController: UITableViewController {
 
 // MARK: - CoreDataTableViewController (Subclass Must Implement)
 
-//extension CoreDataTableViewController {
-//    
-//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        fatalError("This method MUST be implemented by a subclass of CoreDataTableViewController")
-//    }
-//}
+extension CoreDataTableViewController {
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        fatalError("This method MUST be implemented by a subclass of CoreDataTableViewController")
+    }
+}
 
 // MARK: - CoreDataTableViewController (Table Data Source)
 
@@ -57,7 +57,7 @@ extension CoreDataTableViewController {
         if let fc = fetchedResultsController {
             return (fc.sections?.count)!
         } else {
-            return 1
+            return 0
         }
     }
     
@@ -65,7 +65,7 @@ extension CoreDataTableViewController {
         if let fc = fetchedResultsController {
             return fc.sections![section].numberOfObjects
         } else {
-            return 5
+            return 0
         }
     }
     

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="16C67" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Anime" representedClassName="Anime" syncable="YES" codeGenerationType="class">
+        <attribute name="animeDescription" attributeType="String" syncable="YES"/>
+        <attribute name="imageUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="rating" attributeType="Float" defaultValueString="0" usesScalarValueType="YES" indexed="YES" syncable="YES"/>
+        <relationship name="episodes" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Episode" inverseName="anime" inverseEntity="Episode" syncable="YES"/>
+        <relationship name="poster" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Poster" inverseName="anime" inverseEntity="Poster" syncable="YES"/>
+    </entity>
+    <entity name="Episode" representedClassName="Episode" syncable="YES" codeGenerationType="class">
+        <attribute name="name" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="number" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" indexed="YES" syncable="YES"/>
+        <relationship name="anime" maxCount="1" deletionRule="Nullify" destinationEntity="Anime" inverseName="episodes" inverseEntity="Anime" syncable="YES"/>
+    </entity>
+    <entity name="Poster" representedClassName="Poster" syncable="YES" codeGenerationType="class">
+        <attribute name="imageData" optional="YES" attributeType="Binary" syncable="YES"/>
+        <relationship name="anime" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Anime" inverseName="poster" inverseEntity="Anime" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Anime" positionX="-63" positionY="-18" width="128" height="135"/>
+        <element name="Episode" positionX="88" positionY="93" width="128" height="88"/>
+        <element name="Poster" positionX="9" positionY="72" width="128" height="75"/>
+    </elements>
+</model>
